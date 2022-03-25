@@ -14,4 +14,4 @@ There are source code of our mobile app development and website development in t
 
 >Found the web source code through [web branch](/../../tree/Web-development) 
 
-@credit_to: Jacklau1216 , Leung-Kam-Ho and Eason Kwong💕
+@credit_to: Jacklau1216 , Leung-Kam-Ho and KwongKaLok💕
