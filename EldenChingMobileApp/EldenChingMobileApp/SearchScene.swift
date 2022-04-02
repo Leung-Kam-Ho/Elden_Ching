@@ -37,8 +37,9 @@ struct ContentView: View {
     @State var isEditing = false
     var body: some View {
         ZStack{
+            Rectangle().fill(Color.white)
             ScrollView(.vertical, showsIndicators: false){
-                LazyVGrid(columns: twoColumnGrid, alignment:.center, spacing : 20) {
+                LazyVGrid(columns: twoColumnGrid, alignment:.center, spacing : SE20) {
                           // Display the item
                  
                     ForEach(category, id: \.self){ i in
@@ -49,25 +50,23 @@ struct ContentView: View {
                             
                             
                         }
-                    }.animation(Animation.ripple(index: 3) , value: search_text).offset(y: 50)
+                    }.animation(Animation.ripple(index: 3) , value: search_text)
+                        .offset(y: isEditing ? 60: 50)
                         
                     
                 }
             }.offset(y:screen_height*0.15).offset(y:isEditing ? -SE50*1.5 : 0).animation(Animation.ripple(index: 2) , value:isEditing)
             RoundedRectangle(cornerRadius: 15)
-                .fill(Color(#colorLiteral(red: 0.2, green: 0.2, blue:0.2, alpha: 1)))
+                .fill(themeblue)
                 //.fill(Color.white)
                 .frame(height:half_height).offset(y:-half_height*1.08).shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.25)), radius: -4, x: 0, y: 4)
                 .animation(Animation.ripple(index: 3) , value:isEditing)
                 .offset(y: isEditing ? -SE50 : 0)
             
                 ZStack {
-    
                     //MetaChoice
-                    Text("MetaChoice").font(.custom("Sen Regular", size: 35))
-                        .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-                        .foregroundColor(Color.black)
-                        .frame(width: screen_width, height: SE40   )
+                    Image("logo").resizable()
+                        .frame(width: screen_width*0.5, height: SE40)
                 }.animation(Animation.ripple(index: 3) , value:isEditing)
                 .offset(y:isEditing ? -SE50*2 : 0).offset(y:-screen_height*0.46)
                 
@@ -113,6 +112,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewInterfaceOrientation(.portrait)
     }
 }
 
