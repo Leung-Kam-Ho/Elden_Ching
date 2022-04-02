@@ -35,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00A6A07B27F856F200F3748A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		00B91FD327F7E2F400FAC547 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		00EE78EC27EE106C0092A842 /* EldenChingMobileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EldenChingMobileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00EE78EF27EE106C0092A842 /* EldenChingMobileAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EldenChingMobileAppApp.swift; sourceTree = "<group>"; };
@@ -96,6 +97,7 @@
 		00EE78EE27EE106C0092A842 /* EldenChingMobileApp */ = {
 			isa = PBXGroup;
 			children = (
+				00A6A07B27F856F200F3748A /* Info.plist */,
 				00EE78EF27EE106C0092A842 /* EldenChingMobileAppApp.swift */,
 				00EE78F127EE106C0092A842 /* SearchScene.swift */,
 				00B91FD327F7E2F400FAC547 /* CardView.swift */,
@@ -426,6 +428,7 @@
 				DEVELOPMENT_TEAM = TGBMMRU7P7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EldenChingMobileApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -456,6 +459,7 @@
 				DEVELOPMENT_TEAM = TGBMMRU7P7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EldenChingMobileApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
