@@ -28,9 +28,12 @@ extension Animation {
 }
 struct ContentView: View {
     @State var search_text = ""
+    @State var isEditing = false
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 15).fill(Color(#colorLiteral(red: 0.2, green: 0.2, blue:0.2, alpha: 1))).frame(height:half_height*0.70).offset(y:-half_height*0.92).shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)), radius: 4, x: 0, y: 4)
+                .animation(Animation.ripple(index: 3) , value:isEditing)
+                .offset(y: isEditing ? -50 : 0)
             VStack{
                 
                 ZStack {
@@ -42,7 +45,8 @@ struct ContentView: View {
                     
                     //MetaChoice
                     Text("MetaChoice").font(.custom("Sen Regular", size: 35)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-                }
+                }.animation(Animation.ripple(index: 3) , value:isEditing)
+                    .offset(y:isEditing ? -100 : 0)
                 
                 ZStack {
                     //Rectangle 4
@@ -52,10 +56,19 @@ struct ContentView: View {
                 //🔎
                     HStack{
                         Text("🔎").font(.custom("Inter Medium", size: 15))
-                        TextField("Search", text: $search_text).foregroundColor(Color.gray)
+                        TextField("Search", text: $search_text, onEditingChanged:{begin in
+                            if begin{
+                                isEditing = true
+                            }else{
+                                isEditing = false
+                            }
+                            
+                        } ).foregroundColor(Color.gray)
                     }.offset(x: 50)
                     
                 }.frame(height:SE82)
+                    .animation(Animation.ripple(index: 3) , value:isEditing)
+                    .offset(y:isEditing ? -50 : 0)
                 
                 
                 
@@ -96,18 +109,4 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct cardView : View{
-    var name : String
 
-    var body: some View{
-        ZStack{
-            RoundedRectangle(cornerRadius: 15)
-                .fill(Color(#colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)))
-            .frame(width: 170, height: 182.9).shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.25)), radius: 4, x: 0, y: 4)
-            Text(name).foregroundColor(Color(#colorLiteral(red: 0.9019607901573181, green: 0.9019607901573181, blue: 0.9019607901573181, alpha: 1)))
-        }
-       
-    }
-    //Rectangle 5
-    
-}

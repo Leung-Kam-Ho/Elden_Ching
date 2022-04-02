@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00B91FD427F7E2F500FAC547 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B91FD327F7E2F400FAC547 /* CardView.swift */; };
 		00EE78F027EE106C0092A842 /* EldenChingMobileAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE78EF27EE106C0092A842 /* EldenChingMobileAppApp.swift */; };
 		00EE78F227EE106C0092A842 /* SearchScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE78F127EE106C0092A842 /* SearchScene.swift */; };
 		00EE78F427EE106E0092A842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00EE78F327EE106E0092A842 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00B91FD327F7E2F400FAC547 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		00EE78EC27EE106C0092A842 /* EldenChingMobileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EldenChingMobileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00EE78EF27EE106C0092A842 /* EldenChingMobileAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EldenChingMobileAppApp.swift; sourceTree = "<group>"; };
 		00EE78F127EE106C0092A842 /* SearchScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScene.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			children = (
 				00EE78EF27EE106C0092A842 /* EldenChingMobileAppApp.swift */,
 				00EE78F127EE106C0092A842 /* SearchScene.swift */,
+				00B91FD327F7E2F400FAC547 /* CardView.swift */,
 				00EE78F327EE106E0092A842 /* Assets.xcassets */,
 				00EE78F527EE106E0092A842 /* Preview Content */,
 			);
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00EE78F227EE106C0092A842 /* SearchScene.swift in Sources */,
+				00B91FD427F7E2F500FAC547 /* CardView.swift in Sources */,
 				00EE78F027EE106C0092A842 /* EldenChingMobileAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
