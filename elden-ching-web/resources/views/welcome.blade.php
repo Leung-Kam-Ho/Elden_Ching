@@ -36,32 +36,42 @@
                 <main class="grid">
                     <div class="img-container">
                         <img src="{{ url('/images/computer.png') }}" class="image">
-                        <div class="overlay">
-                            <div class="text">Computer</div>
-                        </div>
+                        <a href="{{ '/phone' }}">
+                            <div class="overlay">
+                                <div class="text">Computer</div>
+                            </div>
+                        </a>
                     </div>
                     <div class="img-container">
                         <img src="{{ url('/images/phone.png') }}" class="image">
-                        <div class="overlay">
-                            <div class="text">Mobile Phone</div>
-                        </div>
+                        <a href="{{ '/phone' }}">
+                            <div class="overlay">
+                                <div class="text">Mobile Phone</div>
+                            </div>
+                        </a>
                     </div>
                     <div class="img-container">
                         <img src="{{ url('/images/mouse.png') }}" class="image">
-                        <div class="overlay">
-                            <div class="text">Mouse</div>
-                        </div>
+                        <a href="{{ '/phone' }}">
+                            <div class="overlay">
+                                <div class="text">Mouse</div>
+                            </div>
+                        </a>
                     </div>
                     <div class="img-container">
                         <img src="{{ url('/images/TV.png') }}" class="image">
-                        <div class="overlay">
-                            <div class="text">TV</div>
-                        </div>
+                        <a href="{{ '/phone' }}">
+                            <div class="overlay">
+                                <div class="text">TV</div>
+                            </div>
+                        </a>
                     </div>
                 </main>
             </div>
         </div>
     </div>
+
+
     <script>
         var coll = document.getElementsByClassName("search-btn");
         var i;
