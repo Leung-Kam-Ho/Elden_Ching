@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0014139527FC713D0017A74E /* infoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0014139427FC713D0017A74E /* infoView.swift */; };
+		0014139727FC764C0017A74E /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0014139627FC764C0017A74E /* QuestionView.swift */; };
+		0014139927FC7D710017A74E /* LargeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0014139827FC7D710017A74E /* LargeCardView.swift */; };
+		0014139E27FCA0980017A74E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0014139D27FCA0980017A74E /* Launch Screen.storyboard */; };
 		00B91FD427F7E2F500FAC547 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B91FD327F7E2F400FAC547 /* CardView.swift */; };
 		00EE78F027EE106C0092A842 /* EldenChingMobileAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE78EF27EE106C0092A842 /* EldenChingMobileAppApp.swift */; };
 		00EE78F227EE106C0092A842 /* SearchScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE78F127EE106C0092A842 /* SearchScene.swift */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0014139427FC713D0017A74E /* infoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoView.swift; sourceTree = "<group>"; };
+		0014139627FC764C0017A74E /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		0014139827FC7D710017A74E /* LargeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeCardView.swift; sourceTree = "<group>"; };
+		0014139D27FCA0980017A74E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		00A6A07B27F856F200F3748A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		00B91FD327F7E2F400FAC547 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		00EE78EC27EE106C0092A842 /* EldenChingMobileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EldenChingMobileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,8 +109,12 @@
 				00EE78EF27EE106C0092A842 /* EldenChingMobileAppApp.swift */,
 				00EE78F127EE106C0092A842 /* SearchScene.swift */,
 				00B91FD327F7E2F400FAC547 /* CardView.swift */,
+				0014139427FC713D0017A74E /* infoView.swift */,
 				00EE78F327EE106E0092A842 /* Assets.xcassets */,
 				00EE78F527EE106E0092A842 /* Preview Content */,
+				0014139627FC764C0017A74E /* QuestionView.swift */,
+				0014139827FC7D710017A74E /* LargeCardView.swift */,
+				0014139D27FCA0980017A74E /* Launch Screen.storyboard */,
 			);
 			path = EldenChingMobileApp;
 			sourceTree = "<group>";
@@ -236,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0014139E27FCA0980017A74E /* Launch Screen.storyboard in Resources */,
 				00EE78F727EE106E0092A842 /* Preview Assets.xcassets in Resources */,
 				00EE78F427EE106E0092A842 /* Assets.xcassets in Resources */,
 			);
@@ -262,8 +275,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0014139727FC764C0017A74E /* QuestionView.swift in Sources */,
 				00EE78F227EE106C0092A842 /* SearchScene.swift in Sources */,
+				0014139527FC713D0017A74E /* infoView.swift in Sources */,
 				00B91FD427F7E2F500FAC547 /* CardView.swift in Sources */,
+				0014139927FC7D710017A74E /* LargeCardView.swift in Sources */,
 				00EE78F027EE106C0092A842 /* EldenChingMobileAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,10 +447,11 @@
 				INFOPLIST_FILE = EldenChingMobileApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -462,10 +479,11 @@
 				INFOPLIST_FILE = EldenChingMobileApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
