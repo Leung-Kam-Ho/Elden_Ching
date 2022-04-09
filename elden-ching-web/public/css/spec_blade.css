@@ -1,0 +1,110 @@
+/* prevent overflow */
+html, body{
+    height: 99%;
+    width: 99%;
+    font-family: "Sen", sans-serif;
+}
+
+.container_master{
+    position: relative;
+    width: 101%;
+    height: 80%;
+    top: 17%;
+    font-family: "Sen", sans-serif;
+
+}
+
+/* all the conatiner are 49.7% high and 49.5% width coz 50% have overlap*/
+.container_master > div{
+    width: 49.7%;
+    height: 49.5%;
+    /* delete the border when you finished */
+    position: absolute;
+    font-family: "Sen", sans-serif;
+}
+
+.container_1{
+    
+    top: 0;
+    left: 0;
+    /* overflow: scroll; */
+}
+
+.container_2{
+    top: 0;
+    right: 0;
+    display: flex;
+}
+
+.container_3{
+    bottom: 0;
+    left: 0;
+    overflow: scroll;
+}
+
+.container_4{
+    bottom: 0;
+    right: 0;
+    overflow: scroll;
+}
+
+/* delete the border when you finished */
+
+
+.price_trend{
+    width: 65%;
+    height: 100%;
+}
+
+.container_spec{
+    width: 35%;
+    height: 100%;
+    font-family: "Sen", sans-serif;
+}
+
+
+/* the following three classes declare the header logo */
+.circ-pink {
+    display: inline-block;
+    height: 5vmin;
+    width: 5vmin;
+    background: #df3e55;
+    border-radius: 100%;
+    margin-bottom: 6vmin;
+}
+
+.content-white {
+    display: inline-block;
+    font-size: 12vmin;
+    font-family: "Sen", sans-serif;
+    color: #fff;
+}
+
+.Header{
+    position: absolute;
+    background-color: #1c203b;
+    width: 100%;
+    height: 17%;
+    z-index: 1;
+    text-align: center;
+    top: 0;
+    left: 0;
+    font-family: "Sen", sans-serif;
+}
+
+div.gfg {    
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    text-align:justify;    
+}
+   
+
+.scrolls { 
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 100%;
+    white-space:nowrap
+} 
+
+   

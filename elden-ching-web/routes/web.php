@@ -17,6 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/phone', function () {
-    return view('phone');
+    return view('spec');
 });
 

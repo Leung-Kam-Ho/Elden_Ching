@@ -21,12 +21,12 @@
             <div class="circ-pink"></div>
         </div>
         <div class="Content">
-            <div class="instruction">
+            {{-- <div class="instruction" >
                 <br>
                 <span style="font-family:  Sen, sans-serif;font-size: 5vmin">What are you looking for ?</span>
-            </div>
+            </div> --}}
             <div class="search-bar">
-                <input type="search" name="search" pattern=".*\S.*" required>
+                <input type="search" name="search" pattern=".*\S.*" placeholder="What are you looking for ?" required >
                 <button class="search-btn" type="button">
                     <span>Search</span>
                 </button>
@@ -84,6 +84,7 @@
                 } else {
                     content.style.maxHeight = content.scrollHeight + "px";
                 }
+                
             });
         }
     </script>
