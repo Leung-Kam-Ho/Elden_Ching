@@ -40,7 +40,7 @@ extension Animation {
     }
     static func Qripple(index: Int) -> Animation {
         Animation.spring(dampingFraction: 0.5)
-            .speed(4)
+            .speed(1)
             .delay(0.03 * Double(index))
     }
 }

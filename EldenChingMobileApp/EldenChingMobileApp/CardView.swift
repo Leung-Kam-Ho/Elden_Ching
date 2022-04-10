@@ -39,3 +39,10 @@ struct cardView : View{
     
 }
 
+struct cardView_Preview: PreviewProvider {
+    static var previews: some View {
+        cardView(name : "手機")
+            .previewInterfaceOrientation(.portrait)
+    }
+}
+

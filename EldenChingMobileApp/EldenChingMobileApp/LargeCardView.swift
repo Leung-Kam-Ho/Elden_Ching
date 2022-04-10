@@ -28,7 +28,7 @@ struct LargeCardView : View{
                 
                 VStack{
                     Image("\(name.replacingOccurrences(of: " ", with: "_"))").resizable().aspectRatio(contentMode: .fit).frame(width: screen_width*0.5, height: screen_height*0.5)
-                    Text("$ \(minPrice)-\(MaxPrice)")
+                    Text("$ \(minPrice)-\(MaxPrice)").foregroundColor(Color.white)
                 }
                
                 
