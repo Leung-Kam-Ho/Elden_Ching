@@ -8,13 +8,14 @@
 import Foundation
 import SwiftUI
 private var twoColumnGrid = [GridItem(.flexible()), GridItem(.flexible())]
-var Q_list = ["Budget", "OS","Aspect Ratio","Job Related","Camera", "Monitor Size", "Material"]
+var Q_list = ["Budget", "OS","Aspect Ratio","Job Related","Camera", "Battery", "Material", "Reset"]
 let loop_animation = Animation.Qripple(index: 0).repeatForever(autoreverses: true)
 struct QuestionView : View{
     @State var show = false
     @EnvironmentObject var setting :Settings
     @State var isEditing = false
     @State var move = false
+    @State var overlay = false
     @State var Q_show = false
     @State var question = ""
  
@@ -27,6 +28,7 @@ struct QuestionView : View{
                         Q_show.toggle()
                     }else{
                         show.toggle()
+                        
                     }
                     
                 }
@@ -39,7 +41,11 @@ struct QuestionView : View{
                     Text(Q_show ? " Back" : "We have some questions for you").foregroundColor(Color.white)
                     
                 }.frame(width: screen_width*0.9, height: SE50)
-            }.offset(y: show ? 10 : -20)
+            }.onAppear(){
+                overlay.toggle()
+            }
+            .scaleEffect(overlay ? 1.05 : 1)
+                .offset(y: show ? 10 : -20).animation(loop_animation, value: overlay)
             
             if (show){
                 ZStack{
@@ -151,6 +157,16 @@ struct QuestionView : View{
                                                 Text("16:9").foregroundColor(Color.white)
                                             }
                                         }
+                                        Button(action:{
+                                            setting.ratio = "x"
+                                        }){
+                                            ZStack{
+                                                RoundedRectangle(cornerRadius: 15)
+                                                    .fill(setting.ratio == "x" ? themeblue3 : Color.black.opacity(0.5))
+                                                    .aspectRatio(2, contentMode: .fit)
+                                                Text("Other").foregroundColor(Color.white)
+                                            }
+                                        }
                                         
                                         
                                         
@@ -158,6 +174,92 @@ struct QuestionView : View{
                                     }
                           
                                 }.padding(.all, 50)
+                            }else if(question == "Battery"){
+                                VStack{
+                                    Text("How often did you charge your phone?")
+                                        .foregroundColor(Color.black)
+                                        .font(.system(size: 30))
+                                    
+                                    ZStack(alignment: .leading){
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .fill(themeblue)
+                                            .aspectRatio(2,contentMode: .fit)
+                                        
+                                   
+                                            
+                                            
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .fill(move ?  Color.green : Color.red)
+                                            .scaleEffect(0.8)
+                                            .frame(width: move ? screen_width*0.7 : screen_width*0.3, height: screen_height*0.2)
+                                            .animation(loop_animation, value: move)
+                                        
+                                            
+                                            
+                                 
+                                    }.padding()
+                                        .onAppear(){
+                                            move.toggle()
+                                        }
+                                        
+                                        
+                       
+                                        
+                                    HStack{
+                                        Button(action:{
+                                            withAnimation(){
+                                                setting.ratio = "1"
+                                                setting.finished = true
+                                            }
+                                            
+                                        }){
+                                            ZStack{
+                                                RoundedRectangle(cornerRadius: 15)
+                                                    .fill(setting.ratio == "1" ? themeblue : Color.black.opacity(0.5))
+                                                    .aspectRatio(2, contentMode: .fit)
+                                                Text("1 per Day").foregroundColor(Color.white)
+                                            }
+                                        }
+                                        Button(action:{
+                                            setting.ratio = "2"
+                                        }){
+                                            ZStack{
+                                                RoundedRectangle(cornerRadius: 15)
+                                                    .fill(setting.ratio == "2" ? themeblue2 : Color.black.opacity(0.5))
+                                                    .aspectRatio(2, contentMode: .fit)
+                                                Text("2 per Day").foregroundColor(Color.white)
+                                            }
+                                        }
+                                        Button(action:{
+                                            setting.ratio = "x"
+                                        }){
+                                            ZStack{
+                                                RoundedRectangle(cornerRadius: 15)
+                                                    .fill(setting.ratio == "x" ? themeblue3 : Color.black.opacity(0.5))
+                                                    .aspectRatio(2, contentMode: .fit)
+                                                Text("Other").foregroundColor(Color.white)
+                                            }
+                                        }
+                                        
+                                        
+                                        
+                        
+                                    }
+                          
+                                }.padding(.all, 50)
+                            }else if question == "Reset"{
+                                Button(action:{
+                                    withAnimation(){
+                                        setting.finished = false
+                                    }
+                                    
+                                }){
+                                    ZStack{
+                                        RoundedRectangle(cornerRadius: 15).fill(themeblue).scaleEffect(0.5).aspectRatio( 2,contentMode: .fit)
+                                        Text("Reset?").foregroundColor(Color.white)
+                                    }.padding()
+                                    
+                                }
                             }
                         
 
@@ -183,7 +285,7 @@ struct QuestionView : View{
 
 struct Q_Card : View{
    
-    var Q_label = ["😀","😃","😄","😁","😆","🥹","😅","😂","🤣","🥲"]
+    var Q_label = ["😀","😃","😄","😁","😆","🥹","😅", "😔"]
     var name : String
     var body: some View{
         let id = (Q_list.firstIndex(of: name) ?? 0)
@@ -211,6 +313,8 @@ struct Q_Card : View{
 class Settings: ObservableObject {
     @Published var price:Double = 20000
     @Published var ratio:String = ""
+    @Published var finished:Bool = false
+    @Published var battery:String = ""
 }
 
 struct Q_Preview: PreviewProvider {
