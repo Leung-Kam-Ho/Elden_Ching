@@ -24,7 +24,7 @@ var half_height = UIScreen.main.bounds.height/2
 
 
 //Hard Code Database
-var category = ["電腦","手機","影音","電視","1","2","3","4","x","x"]
+var category = ["Computer","Communication","Audio Visual","TV","1","2","3","4","x","x"]
 var label = ["4️⃣0️⃣4️⃣","💻", "📱","🎧","📺"]
 
 var DB = [[["Mac Studio", "15900","15999"],["Mac Mini", "5099", "6650"],["Macbook Air 2020","6915", "12799"]], [["iPhone 13", "6335","9299"],["iPhone 12", "4998", "7159"],["iPhone SE Gen 3","3280", "4250"]]]
