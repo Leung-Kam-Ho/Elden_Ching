@@ -1,4 +1,6 @@
-# Elden Ching (HackUST 2022) [<img src="https://c.tenor.com/yLIeWZwYM1gAAAAC/the-wok-the-rock.gif" width="40" height="40" align="right"/>](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+![image](https://user-images.githubusercontent.com/72988082/163208870-068c01d1-7b3d-499b-86a3-9ff05182c9cc.png)
+
+# Elden Ching (HackUST 2022)
 
 ## Problem define:
 Due to technological advancement, e-commerce and mobile commerce are popular worldwide, thus creating a rising trend of online shopping demand. The high internet penetration rate allows quick information flow, which favours people shopping online. However, the problem of overspending and huge disposal creation exists because of unclear information during shopping processes and misunderstanding of product functions. Many people duplicate buying the same products as they forget what they have just now. And some people are confused about whether the products are suitable for them as they lack clear judgment information.
