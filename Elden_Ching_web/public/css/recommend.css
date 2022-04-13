@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@700&display=swap");
+
+html,
+body {
+    font-family: "Sen", sans-serif;
+    height: 100%;
+}
+
+.main_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.question {
+    height: 100%;
+    width: 30%;
+    border-right: 5px black solid;
+    background-color: white;
+    padding-top: 10vw;
+    padding-bottom: 10vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    position: relative;
+}
+
+.q_box {
+    border: 5px black solid;
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    padding: 2vw;
+    text-align: center;
+}
+
+.q {
+    margin-top: 1vw;
+    height: 90%;
+    width: 100%;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+}
+
+.display {
+    margin-top: 5%;
+    height: 90%;
+    width: 70%;
+    background-color: white;
+    padding: 5vw;
+    position: relative;
+}
+
+.item_container {
+    display: flex;
+    width: 100%;
+    height: 90%;
+}
+
+.pag_container {
+    width: fit-content;
+    margin: auto;
+}
+
+/* Pagination links */
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border-radius: 50%;
+}
+
+/* Style the active/current link */
+.pagination a.active {
+    background-color: #171717;
+    color: white;
+}
+
+/* Add a grey background color on mouse-over */
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    size: 100px;
+    padding: 10px;
+    font-size: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: rgb(29, 29, 29);
+}
+
+.home {
+    position: absolute;
+    left: 1vw;
+    bottom: 1vw;
+}
+
+.home:hover {
+    transition-duration: 0.5s;
+    transform: scale(1.2);
+}
+
+#min {
+    position: absolute;
+    border: 3px black solid;
+    left: -75px;
+    width: 60px;
+    height: fit-content;
+    border-radius: 5px;
+    top: -5px;
+}
+
+#max {
+    position: absolute;
+    border: 3px black solid;
+    right: -75px;
+    width: 60px;
+    height: fit-content;
+    border-radius: 5px;
+    top: -5px;
+}
+
+.container {
+    margin-top: 30px;
+    width: 55%;
+    height: 50px;
+    position: relative;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    margin: auto;
+    background-color: transparent;
+    pointer-events: none;
+    top: 0;
+}
+
+.slider-track {
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 1.5em;
+    width: 1.5em;
+    background-color: #1c203b;
+    cursor: pointer;
+    border-radius: 15px;
+    pointer-events: auto;
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+    background-color: white;
+    border: 3px solid rgb(0, 92, 197);
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+    transition-duration: 0.3s;
+    transform: scale(1.1);
+}
+
+.btn_final {
+    background-color: #1c203b;
+    color: white;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+    margin: 20px;
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.btn_final:hover {
+    transform: scale(1.7);
+}
+
+@keyframes fade_out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fade_in {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes move_r {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-500px);
+    }
+}
+
+.collapsible {
+    background-color: #1c203b;
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    width: 95%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    float: left;
+    z-index: 10;
+    position: relative;
+}
+
+.active,
+.collapsible:hover {
+    background-color: #2c325a;
+}
+
+.questions {
+    width: 95%;
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: rgb(216, 216, 216);
+    transform: translate(0px , -20px);
+    z-index: 1;
+    position: relative;
+    padding-top: 25px;
+    border-radius: 10px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.collapsible > i {
+    float: right;
+}
+
+.category{
+    position: absolute;
+    bottom: 230px;
+    left: 20px;
+}
+
+.choice_box{
+    width: 100%;
+}
+
+.choice_input{
+    display: inline;
+    width: 100%;
+    margin-right: 20px;
+}

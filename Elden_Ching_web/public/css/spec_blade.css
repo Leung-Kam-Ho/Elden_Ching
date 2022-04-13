@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@700&display=swap");
+
+/* prevent overflow */
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: "Sen", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* the following three classes declare the header logo */
+.circ-pink {
+    display: inline-block;
+    height: 5vmin;
+    width: 5vmin;
+    background: #df3e55;
+    border-radius: 100%;
+    margin-bottom: 6vmin;
+}
+
+.content-white {
+    display: inline-block;
+    font-size: 12vmin;
+    font-family: "Sen", sans-serif;
+    color: #fff;
+}
+
+.Header{
+    position: absolute;
+    background-color: #1c203b;
+    width: 100%;
+    height: 17%;
+    z-index: 1;
+    text-align: center;
+    top: 0;
+    left: 0;
+    font-family: "Sen", sans-serif;
+}
+
+.container_master{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.container_column{
+    display: block;
+    width: 100%;
+    height: 99%;
+    bottom: 0;
+    text-align: center;
+}
+
+.phone{
+    padding-top: 20px;
+    width: 100%;
+    height: 30%;
+    text-align: center;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table tr{
+    text-align: left;
+}
+
+table td{
+    padding-bottom: 10px;
+    padding-left: 30px;
+}
+
+.spacing{
+    height: 18%;
+}
+
+.spec_detail{
+    width: 90%;
+    height: 24%;
+    margin: 10px;
+    border-radius: 10px;
+    border: 5px #1c203b solid;
+    text-align: center;
+}
+
+.comment{
+    height: 70%;
+    padding: 20px;
+}
+
+.reviews{
+    margin: 20px;
+    text-align: left;
+}
+
+.rating{
+    float: right;
+    margin: 15px;
+}
+
+.comments{
+    margin-top: 10px;
+}
+
+   
